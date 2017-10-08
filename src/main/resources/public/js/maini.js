@@ -1,12 +1,12 @@
 var app=angular.module("reCaptchaDemo", []);
 app.controller("AppCtrl", function($scope, $http){
-$scope.auth={}
+$scope.auth={};
 $scope.sendForm = function(auth){
    $http({
-       method: POST,
+       method: "POST",
        url: "/register",
        data: $.param(auth),
-       headers:{"Content-Type" : "application/x-www-form-urlencoded" }
+       headers: { "Content-Type" : "application/x-www-form-urlencoded" }
 
    });
 }
@@ -25,7 +25,7 @@ return {
             var reCaptcha = document.createElement("script");
             reCaptcha.type = "text/javascript";
             reCaptcha.async = true;
-            reCaptcha.source = "https://www.google.com/recaptcha/api.js?onload=onLoadReCaptchaCallback&render=explicit";
+            reCaptcha.src = "https://www.google.com/recaptcha/api.js?onload=onLoadReCaptchaCallback&render=explicit";
             var firstScript = document.getElementsByTagName("script")[0];
             firstScript.parentNode.insertBefore(reCaptcha, firstScript);
 
