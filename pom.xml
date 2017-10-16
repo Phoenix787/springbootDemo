@@ -18,7 +18,7 @@
         <java.version>1.8</java.version>
         <start-class>springboot.Application</start-class>
     </properties>
-    <packaging>war</packaging>
+    <!--<packaging>war</packaging>-->
 
     <dependencies>
         <dependency>
@@ -37,6 +37,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
         <!--*************************************************-->
@@ -116,19 +121,21 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>ro.isdc.wro4j</groupId>-->
-            <!--<artifactId>wro4j-core</artifactId>-->
-            <!--<version>1.8.0</version>-->
-        <!--</dependency>-->
 
-        <!--минифатор-коммпрессор ресурсов-->
-
+        <!--для минимизации и компрессии файлов-ресурсов-->
         <dependency>
-            <groupId>eu.michael-simons</groupId>
-            <artifactId>wro4j-spring-boot-starter</artifactId>
-            <version>0.3.4</version>
+            <groupId>ro.isdc.wro4j</groupId>
+            <artifactId>wro4j-core</artifactId>
+            <version>1.8.0</version>
         </dependency>
+
+        <!--&lt;!&ndash;минифатор-коммпрессор ресурсов&ndash;&gt;-->
+
+        <!--<dependency>-->
+            <!--<groupId>eu.michael-simons</groupId>-->
+            <!--<artifactId>wro4j-spring-boot-starter</artifactId>-->
+            <!--<version>0.3.4</version>-->
+        <!--</dependency>-->
 
 
 <!--*************************************************************************-->

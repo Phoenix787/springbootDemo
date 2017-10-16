@@ -12,6 +12,7 @@ import springboot.service.RecaptchaApiClient;
 
 @Slf4j
 @RestController
+@CrossOrigin(origins = "http://localhost:8080") //говорит о том, что к серверу можно обращаться только с этого адреса
 public class AuthController {
     @Autowired
     private RecaptchaApiClient recaptchaApiClient;
